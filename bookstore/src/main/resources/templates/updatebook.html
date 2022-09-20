@@ -16,9 +16,9 @@
 			<input type="text" id="title" th:field="*{title}"/>
 			<label for="isbn">Author</label>
 			<input type="text" id="author" th:field="*{author}"/>
-			<label for="category">Category</label>
-			<select id="category" th:field="*{category}" class="form-control">
-       			<option th:each="category: ${category}" th:value="${category.id}" th:text="${category.name}"></option>
+			<label for="categoryList">Category</label>
+			<select id="categoryList" th:field="*{category}" class="form-control">
+       			<option th:each="category: ${categorys}" th:value="${category.id}" th:text="${category.name}"></option>
 			</select>
 			
 			

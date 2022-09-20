@@ -16,7 +16,7 @@ public class Category {
 	private String name;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
-	private List<Booke> book;
+	private List<Booke> books;
 	
 	public Category(){}
 	
@@ -42,11 +42,11 @@ public class Category {
 	}
 
 	public List<Booke> getBooks() {
-		return book;
+		return books;
 	}
 
-	public void setBook(List<Booke> book) {
-		this.book = book;
+	public void setBook(List<Booke> books) {
+		this.books = books;
 	}
 	
 	@Override

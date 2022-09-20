@@ -27,6 +27,7 @@ public class BookstoreApplication {
 			log.info("Save a couple of categories");
 			crepository.save(new Category("Adventure"));
 			crepository.save(new Category("Romance"));
+			crepository.save(new Category("Fantasy"));
 			
 			log.info("Save a couple of books");
 			repository.save(new Booke("1232323-21", "A farewell to Arms", "Ernest Hemingway", crepository.findByName("Adventure").get(0)));

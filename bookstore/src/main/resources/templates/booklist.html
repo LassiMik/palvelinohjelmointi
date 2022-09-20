@@ -17,7 +17,7 @@
 			<td th:text=${booke.isbn}></td>
 			<td th:text=${booke.title}></td>
 			<td th:text=${booke.author}></td>
-			<td th:text="${booke.category.name}"></td>
+			<td th:text=${booke.category.name}></td>
 			<td><a th:href="@{/delete/{id}(id=${booke.id})}">Delete</a></td>
 			<td><a th:href="@{/update/{id}(id=${booke.id})}">Edit</a></td>
 		</tr>
