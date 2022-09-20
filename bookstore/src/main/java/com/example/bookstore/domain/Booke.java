@@ -3,23 +3,31 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 
 @Entity
 public class Booke {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	private String isbn;
 	private String title;
 	private String author;
 	
+	@ManyToOne
+    @JoinColumn(name = "categoryId")
+    private Category category;
+	
 	public Booke(){}
 	
-	public Booke(String isbn, String title, String author) {
+	public Booke(String isbn, String title, String author, Category category) {
+		super();
 		this.isbn = isbn;
 		this.title = title;
 		this.author = author;
+		this.category = category;
 	}
 	public Long getId() {
 		return id;
@@ -45,6 +53,14 @@ public class Booke {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+	public Category getCategory() {
+		return category;
+	}
+	public void setCagetory(Category category) {
+		this.category = category;
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "isbn = "+isbn+",title = "+title+",author = "+author;
