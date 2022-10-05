@@ -36,7 +36,7 @@ public class BookstoreApplication {
 			
 			bookRepository.save(new Book("The Great Gatsby", "F. Scott Fitzgerald", categoryRepository.findByName("Adventure").get(0)));
 			bookRepository.save(new Book("Moby Dick", "Herman Melville", categoryRepository.findByName("Adventure").get(0)));
-			bookRepository.save(new Book("Crime and Punishment", "Fyodor Dostoyevesky", categoryRepository.findByName("Adventure").get(0)));
+			bookRepository.save(new Book("Crime and Punishment", "Fyodor Dostoyevesky", categoryRepository.findByName("True Crime").get(0)));
 		};
 	}
 
