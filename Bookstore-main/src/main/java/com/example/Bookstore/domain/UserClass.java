@@ -5,6 +5,7 @@ import javax.persistence.*;
 import org.springframework.lang.NonNull;
 
 @Entity
+@Table(name="usertable") 
 public class UserClass {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
